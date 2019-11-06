@@ -4,6 +4,14 @@ break: true
 indent: 4
 ---
 
+src/main:
+    java:
+        project/Main.java:
+            ConfirmFileExists
+            CountSingleLineComments --language Java --count 8
+            CountMultipleLineComments --language Java --count 2
+            MatchFileFragment --fragment "@author" --count 1 --exact
+
 writing/proposal.md:
     ConfirmFileExists
     CountFileWords --count 450
